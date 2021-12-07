@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/OSSA-Website/bin/Debug/netcoreapp3.1
+/OSSA-Website/obj
+/OSSA-Website/OSSA-Website.csproj.user
