@@ -11,6 +11,13 @@ namespace OSSA_Website
 {
     public class Program
     {
+        public class Settings
+        {
+            public string Notification_Service_URL { get; set; } 
+        }
+
+        public static Settings _settings { get; set; } = new Settings();
+  
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

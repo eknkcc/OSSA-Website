@@ -16,6 +16,8 @@ namespace OSSA_Website
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
+            Program._settings.Notification_Service_URL = configuration.GetValue<string>("Notification_Service_URL");
         }
 
         public IConfiguration Configuration { get; }
@@ -24,11 +26,19 @@ namespace OSSA_Website
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromHours(1);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -42,6 +52,7 @@ namespace OSSA_Website
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();
