@@ -17,7 +17,7 @@ namespace OSSA_Website
         {
             Configuration = configuration;
 
-            Program._settings.Notification_Service_URL = configuration.GetValue<string>("Notification_Service_URL");
+            Program._settings.ApiGateway_Service_URL = configuration.GetValue<string>("ApiGateway_Service_URL");
         }
 
         public IConfiguration Configuration { get; }

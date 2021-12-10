@@ -45,7 +45,7 @@ namespace OSSA_Website.Controllers
                 model.Content = "Name surname: " + namesurname + ", Email:" + email + ", Message:" + message;
 
                 //Send email to system Admin
-                string jsonResponse = Utility.Request.Post(Program._settings.Notification_Service_URL + "/Notification/SendPublicContactEmail", Utility.Serializers.SerializeJson(model));
+                string jsonResponse = Utility.Request.Post(Program._settings.ApiGateway_Service_URL + "/PublicActions/Notification/SendPublicContactEmail", Utility.Serializers.SerializeJson(model));
 
                 //Parse response
                 SimpleResponse res = Utility.Serializers.DeserializeJson<SimpleResponse>(jsonResponse);
