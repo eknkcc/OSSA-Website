@@ -1,9 +1,9 @@
 ﻿
-using Helpers.Models.NotificationModels;
-using Helpers.Models.SharedModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using OSSA_Website.Models.NotificationModels;
+using OSSA_Website.Models.SharedModels;
 using OSSA_Website.Utility;
 using System;
 using System.Collections.Generic;
@@ -45,10 +45,10 @@ namespace OSSA_Website.Controllers
                 model.Content = "Name surname: " + namesurname + ", Email:" + email + ", Message:" + message;
 
                 //Send email to system Admin
-                string jsonResponse = Helpers.Request.Post(Program._settings.Notification_Service_URL + "/Notification/SendPublicContactEmail", Helpers.Serializers.SerializeJson(model));
+                string jsonResponse = Utility.Request.Post(Program._settings.Notification_Service_URL + "/Notification/SendPublicContactEmail", Utility.Serializers.SerializeJson(model));
 
                 //Parse response
-                SimpleResponse res = Helpers.Serializers.DeserializeJson<SimpleResponse>(jsonResponse);
+                SimpleResponse res = Utility.Serializers.DeserializeJson<SimpleResponse>(jsonResponse);
 
                 if (res.Success == false)
                 {

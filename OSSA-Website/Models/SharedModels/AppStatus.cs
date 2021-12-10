@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Helpers.Models.SharedModels
+namespace OSSA_Website.Models.SharedModels
 {
     /// <summary>
     ///  Microservice heartbeat status class

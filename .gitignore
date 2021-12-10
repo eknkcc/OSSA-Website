@@ -6,3 +6,5 @@
 /OSSA-Website/bin/Debug/netcoreapp3.1
 /OSSA-Website/obj
 /OSSA-Website/OSSA-Website.csproj.user
+/Helpers/bin/Debug/netcoreapp3.1
+/Helpers/obj

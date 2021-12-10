@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Helpers
+namespace OSSA_Website.Utility
 {
     /// <summary>
     ///  Generic serializers class

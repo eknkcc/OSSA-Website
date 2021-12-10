@@ -4,7 +4,7 @@ using System.Net;
 using System.Text;
 using System.Xml;
 
-namespace Helpers
+namespace OSSA_Website.Utility
 {
     /// <summary>
     ///  Generic HTTP Requests class

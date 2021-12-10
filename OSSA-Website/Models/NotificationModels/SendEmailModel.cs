@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Helpers.Models.NotificationModels
+namespace OSSA_Website.Models.NotificationModels
 {
     /// <summary>
     ///  Email notification model 
