@@ -25,8 +25,8 @@
                         <!-- Logo s -->
                         <div class="header-logo logo">
                             <a href="../Home/Index" class="logo-link">
-                                <img class="logo-dark" src="~/assets/images/logo-dark.png" srcset="~/assets/images/logo-dark.png 2x" alt="logo">
-                                <img class="logo-light" src="~/assets/images/logo-light2x.png"  alt="logo">
+                                @*   <img class="logo-dark" src="~/assets/images/logo-dark.png" srcset="~/assets/images/logo-dark.png 2x" alt="logo">
+                                <img class="logo-light" src="~/assets/images/logo-light2x.png"  alt="logo">*@
                             </a>
                         </div>
 
@@ -61,13 +61,12 @@
 
                                 </ul>
 
-                   
+
                             </nav>
                         </div><!-- .header-navbar e -->
                     </div>
                 </div>
             </div><!-- .header-main e -->
-           
             <!-- .header-banner e -->
         </header>
 
@@ -78,10 +77,10 @@
 
 
         @*<footer class="border-top footer text-muted">
-                <div class="container">
-                    &copy; 2021 - DaoWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </div>
-            </footer>*@
+        <div class="container">
+        &copy; 2021 - DaoWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        </footer>*@
         <footer class="nk-footer bg-theme-grad">
             <!-- // -->
             <section class="section section-footer tc-light bg-transparent">
@@ -89,7 +88,7 @@
                 <div class="container">
                     <!-- Block s -->
                     <div class="nk-block block-footer mgb-m30">
-                        <div class="row">                
+                        <div class="row">
                             <div class="col-lg-6 order-lg-first">
                                 <div class="wgs wgs-text">
                                     <div class="wgs-body">
@@ -107,7 +106,11 @@
             <div class="nk-ovm shape-b"></div>
         </footer>
     </div>
-    <div class="preloader preloader-alt no-split"><span class="spinner spinner-alt"><img class="spinner-brand" src="~/assets/images/logo-light2x.png" alt=""></span></div>
+    <div class="preloader preloader-alt no-split">
+        <span class="spinner spinner-alt">
+            @* <img class="spinner-brand" src="~/assets/images/logo-light2x.png" alt="">*@
+        </span>
+    </div>
     <!-- JavaScript -->
     <script src="~/assets/js/jquery.bundle.js?ver=1930"></script>
     <script src="~/assets/js/scripts.js?ver=1930"></script>
